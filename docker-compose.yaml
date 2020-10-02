@@ -1,0 +1,19 @@
+version: '3'
+networks:
+  eventfinder:
+
+services:
+  db:
+    build:
+      context: ./DB
+    networks:
+      - eventfinder
+  web:
+    depends_on:
+      - db
+    build:
+      context: .
+    networks:
+      - eventfinder
+    ports:
+      - "80:8080"

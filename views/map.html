@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>EventFinder</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+      <a class="navbar-brand">EventFinder</a>
+
+      <div class="d-flex justify-content-end">
+        <select id="dropdown-choice" selected="city">
+          <option value="city">City</option>
+          <option value="users">Users</option>
+        </select>
+
+        <form class="form-inline d-inline-flex p-2 bd-highlight" id="search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+      <div>
+        <div class="btn btn-info" id="edit" type="button">Edit</div>
+        <div class="btn btn-warning" id="logout" type="button">Log out</div>
+      </div>
+    </nav>
+
+    <div class="map-main">
+
+      <div class="alert alert-success welcome" id="welcome" role="alert">
+        <button type="button" class="close close-welcome" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <span id="welcomeText"></span>
+      </div>
+
+      <button class="btn btn-primary" id="button-fav" type="submit">My events</button>
+
+      <div class="card text-center" id="cards-favorite-events">
+        <div class="card-header">
+          <button type="button" class="close close-favorite-events" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          Favorite events
+        </div>
+        <div class="card-body card-body-event" id="favorites">
+        </div>
+        <div class="card-footer text-muted card-favorite">
+          X events
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="modal-users" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document" id="modal-container">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-users-title">Users matching your request</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modal-users-body"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="map"></div>
+    </div>
+
+
+</body>
+<script src="js/map-popup.js"></script>
+<script src="js/map.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,123 @@
+.containerForm {
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgb(199, 213, 219);
+    border-radius: 30px;
+}
+
+.formTitle {
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.message {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+ .containerMessageOk {
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: rgb(204, 231, 207);
+    border-radius: 30px;
+}
+
+.containerMessageFail {
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #c7b9b0;
+    border-radius: 30px;
+}
+
+
+.formSign {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.field {
+    margin: auto;
+}
+
+.submit {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px
+}
+
+#map {
+  height: 92%;
+  width: 100%;
+  margin: auto;
+  z-index: 0;
+  position: relative;
+}
+
+.welcome {
+  margin: 0;
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 50px;
+}
+
+.form-inline {
+  margin: 0;
+}
+
+#dropdown-choice {
+  margin: auto;
+}
+
+#cards-favorite-events {
+  top: 100px;
+  z-index: 2;
+  width: 350px;
+  position: absolute;
+}
+
+.map-main {
+  position: relative;
+}
+
+#button-fav {
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  left: 10px;
+}
+
+#btn-more-info, #add-to-list, #delete-event {
+  display: inline-block;
+  margin: auto;
+  margin-top: 5%;
+}
+
+/* #btn-more-info {
+  display: inline-block;
+  margin-top: 5%;
+}
+ */
+#btn-more-info {
+  color: white;
+  margin-left: 5%;
+}
+
+#favorites {
+  /* max-height: 650px; */
+  max-height: 40rem;
+  overflow-y:scroll; 
+  overflow-x:scroll; 
+}
+
